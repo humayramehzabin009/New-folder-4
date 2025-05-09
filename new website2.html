@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Sayeema's World</title>
+
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgb(240, 255, 255); /* AliceBlue */
+    }
+
+    /* Navigation Bar */
+    .topnav {
+      overflow: hidden;
+      background-color: rgb(222, 213, 238);
+    }
+
+    .topnav a {
+      float: left;
+      color: rgb(171, 158, 80);
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .topnav a:hover {
+      background-color: gray;
+      color: white;
+    }
+
+    .topnav a.active {
+      background-color: green;
+      color: white;
+    }
+
+    /* Banner Section */
+    .pimg1 {
+      background-image: url(https://images.hdqwalls.com/download/anime-girl-evening-in-the-mountains-f7-1280x800.jpg);
+      min-height: 400px;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      position: relative;
+    }
+
+    .ptext {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      color: white;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 5px;
+    }
+
+    .section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .section-dark {
+      background-color: rgb(230, 242, 255); /* Light blue */
+      color: rgb(50, 50, 50); /* Dark gray */
+    }
+
+    /* Image Slider */
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px auto;
+    }
+
+    .myslides {
+      display: none;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: darkslategray;
+      margin-top: 40px;
+      font-size: 32px;
+      text-decoration: underline;
+    }
+   /*project section*/
+   section {
+    padding: 20px;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a class="active" href="about.html">About</a>
+    <a href="contactme.html">Contact Me</a>
+    <a href="mywork.html">My work</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+ 
+  <!-- Welcome Banner -->
+  <div class="pimg1">
+    <div class="ptext">“Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world.”
+        — Albert Einstein</div>
+  </div>
+
+  <!-- Intro Section -->
+  <section class="section section-dark">
+    <h2>Welcome to Sayeema's World! 🦋</h2>
+    <p>Hi, I am <strong>Sayeema</strong>!</p>
+    <p>I am 16 years old and from Bangladesh.</p>
+    <p>I enjoy <strong>Mathematics</strong> and <strong>Science</strong> and love reading books in my free time.</p>
+    <p>Currently, I'm a passionate learner at Codingal, exploring HTML, CSS, and Bootstrap.</p>
+    <p><strong>My GitHub:</strong> <a href="https://github.com/Nusrat-2808" target="_blank">Nusrat-2808</a></p>
+  </section>
+
+  <!-- Favorite Places Slider -->
+  <!-- <h1>My Favorite Places</h1>
+  <div class="carousel-container">
+    <img class="myslides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBZk1IhvCr59GryGutCFsZ-ZA4-8WCAzGw1Q&s" alt="Place 1" />
+    <img class="myslides" src="https://hips.hearstapps.com/hmg-prod/images/el-pailon-del-diablo-banos-ecuador-royalty-free-image-1570205205.jpg" alt="Place 2" />
+    <img class="myslides" src="https://www.travelandleisure.com/thmb/wsA6EXFuYkqtuJGLbQWw05-cwPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lake-como-MOSTBEAUTIFUL0921-cb08f3beff1041e4beefc67b5e956b23.jpg" alt="Place 3" />
+    <img class="myslides" src="https://hblimg.mmtcdn.com/content/hubble/img/bali/mmt/destination/m_bali_l_393_629.jpg" alt="Place 4" />
+    <img class="myslides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyvAa8hG82mG06nsEbd0Cf6WmHn4HiKq-gA&s" alt="Place 5" />
+  </div> -->
+
+  <!-- JavaScript for Image Carousel -->
+  <script>
+    let index = 0;
+    const slides = document.getElementsByClassName("myslides");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      index++;
+      if (index > slides.length) index = 1;
+      slides[index - 1].style.display = "block";
+      setTimeout(showSlides, 2000); // 2 seconds delay
+    }
+
+    showSlides();
+  </script>
+
+</body>
+</html>
